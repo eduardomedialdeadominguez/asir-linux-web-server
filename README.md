@@ -56,7 +56,7 @@ También practiqué detener e iniciar el servicio utilizando `systemctl`.
 
 Transferí los archivos de la web desde Windows a Ubuntu Server mediante **SCP** y los ubiqué en `/var/www/html`.
 
-Durante el despliegue apareció un error **403 Forbidden** relacionado con el acceso a los archivos/directorios del sitio. Revisé y ajusté permisos hasta poder mostrar la página. **Nota documental:** en el informe original se escribió `chown 755`; el comando habitual para establecer permisos numéricos es `chmod 755`. El comando exacto ejecutado debe verificarse en las evidencias originales antes de documentarlo como tal.
+Durante el despliegue apareció un error **403 Forbidden** relacionado con el acceso a los archivos/directorios del sitio. Revisé y ajusté permisos hasta poder mostrar la página.
 
 ### 4. Dominio local y Virtual Host HTTP
 
