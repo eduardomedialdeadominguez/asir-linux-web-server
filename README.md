@@ -56,8 +56,7 @@ También practiqué detener e iniciar el servicio utilizando `systemctl`.
 
 Transferí los archivos de la web desde Windows a Ubuntu Server mediante **SCP** y los ubiqué en `/var/www/html`.
 
-Durante el despliegue apareció un error **403 Forbidden** relacionado con el acceso a los archivos/directorios del sitio. Revisé y ajusté permisos hasta poder mostrar la página.
-
+Durante el despliegue apareció un error **403 Forbidden** relacionado con el acceso a los archivos/directorios del sitio. Revisé y ajusté permisos hasta poder mostrar la página. 
 ### 4. Dominio local y Virtual Host HTTP
 
 Configuré la resolución local de `www.tecnoweb.local` mediante el archivo `hosts` y creé un Virtual Host en:
@@ -86,7 +85,6 @@ sudo apache2ctl -M | grep ssl
 
 Preparé `/etc/apache2/ssl` para el certificado y la clave privada de un **certificado autofirmado generado con OpenSSL**. También configuré un Virtual Host HTTPS, recargué Apache y comprobé que atendía conexiones en el puerto TCP 443. La web se verificó desde un navegador Windows.
 
-
 ### 6. Registros y diagnóstico
 
 Consulté los archivos de registro ubicados en `/var/log/apache2/`, incluidos los registros separados de acceso y errores para HTTP y HTTPS. Para examinar las últimas peticiones HTTPS utilicé:
@@ -105,13 +103,53 @@ Apache devolvió **404 Not Found** y localicé la petición en el log de acceso.
 
 ## Evidencias del laboratorio
 
-Las capturas seleccionadas se incorporarán en la carpeta `capturas/`, tras revisar los datos visibles y las autorizaciones necesarias:
+Capturas extraídas **de mi propia práctica**. Están organizadas por fases y muestran únicamente resultados que aparecen en el PDF original. Algunos pasos (por ejemplo, el comando exacto de transferencia SCP o la comprobación de escucha en el puerto 443) constan en el informe, pero no tienen una captura independiente.
 
-- Preparación de la máquina virtual y comprobaciones iniciales.
-- Estado y escucha de Apache2 en el puerto 80.
-- Sitio web publicado y accesible desde Windows por HTTP.
-- Virtual Host y comprobaciones de HTTPS en el puerto 443.
-- Comprobación de registros y respuesta 404.
+| Fase | Evidencia |
+| --- | --- |
+| Configuración VM VMware | [Ver captura](capturas/01-vm-vmware.png) (pág. 3 del informe) |
+| Sistema Ubuntu, hostname e IP | [Ver captura](capturas/02-ubuntu-sistema-red.png) (pág. 4 del informe) |
+| Apache2, estado del servicio | [Ver captura](capturas/03-apache-estado.png) (pág. 5 del informe) |
+| Inicio automático de Apache2 | [Ver captura](capturas/04-apache-inicio-automatico.png) (pág. 6 del informe) |
+| Escucha en puerto TCP 80 | [Ver captura](capturas/05-apache-puerto-80.png) (pág. 6 del informe) |
+| Página inicial Apache | [Ver captura](capturas/06-pagina-apache-inicial.png) (pág. 6 del informe) |
+| Web TecnoWeb publicada | [Ver captura](capturas/07-web-publicada.png) (pág. 7 del informe) |
+| Resolución local en hosts | [Ver captura](capturas/08-hosts-dominio-local.png) (pág. 8 del informe) |
+| Virtual Host HTTP tecnoweb.conf | [Ver captura](capturas/09-virtualhost-http.png) (pág. 8 del informe) |
+| Web con dominio local HTTP | [Ver captura](capturas/10-web-dominio-http.png) (pág. 9 del informe) |
+| Certificado y clave: listado sin contenido | [Ver captura](capturas/11-certificado-ssl-archivos.png) (pág. 9 del informe) |
+| Habilitación del Virtual Host HTTPS | [Ver captura](capturas/12-habilitacion-virtualhost-https.png) (pág. 10 del informe) |
+| Acceso HTTPS en navegador | [Ver captura](capturas/13-web-https-navegador.png) (pág. 10 del informe) |
+| Logs de acceso de Apache | [Ver captura](capturas/14-registros-acceso-apache.png) (pág. 12 del informe) |
+| Registro de solicitud HTTP 404 | [Ver captura](capturas/15-registro-solicitud-404.png) (pág. 13 del informe) |
+
+### Capturas destacadas
+
+**Apache2: estado del servicio**
+
+![Apache2: estado del servicio](capturas/03-apache-estado.png)
+
+**Web desplegada**
+
+![Web desplegada](capturas/07-web-publicada.png)
+
+**Configuración Virtual Host HTTP**
+
+![Configuración Virtual Host HTTP](capturas/09-virtualhost-http.png)
+
+**Habilitación HTTPS**
+
+![Habilitación HTTPS](capturas/12-habilitacion-virtualhost-https.png)
+
+**Acceso HTTPS desde Windows**
+
+![Acceso HTTPS desde Windows](capturas/13-web-https-navegador.png)
+
+**Log de solicitud 404**
+
+![Log de solicitud 404](capturas/15-registro-solicitud-404.png)
+
+> **Nota de seguridad:** el listado de certificados de la captura 11 no incluye el contenido de la clave privada. En la captura aparecen permisos de lectura amplios para el archivo `.key`; como mejora de seguridad del laboratorio, deben restringirse al administrador. No se incluye esa clave en el repositorio.
 
 ## Aprendizajes
 
@@ -123,3 +161,5 @@ Este proyecto reforzó mis conocimientos sobre administración de Linux, desplie
 Estudiante de Administración de Sistemas Informáticos en Red (ASIR), ILERNA.
 
 ---
+
+*Documentación propia basada en una práctica académica. No se publican datos privados, claves ni material docente sin autorización.*
