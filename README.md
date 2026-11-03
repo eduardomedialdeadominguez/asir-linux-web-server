@@ -159,6 +159,6 @@ Este proyecto reforzó mis conocimientos sobre administración de Linux, desplie
 Estudiante de Administración de Sistemas Informáticos en Red (ASIR), ILERNA.
 
 ---
-> **Nota de seguridad:** El proyecto se desarrolló en un entorno de laboratorio. Las direcciones IP utilizadas pertenecen a una red privada y no se incluyen contraseñas ni claves privadas.
+> **Nota de seguridad:** Proyecto académico realizado en un entorno virtualizado de laboratorio durante el Grado Superior de ASIR. La máquina virtual utilizada ya no se encuentra activa y las direcciones IP mostradas corresponden a una red privada de pruebas.
 
 *Documentación propia basada en una práctica académica. No se publican datos privados, claves ni material docente sin autorización.*
