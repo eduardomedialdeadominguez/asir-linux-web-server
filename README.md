@@ -123,5 +123,3 @@ Este proyecto reforzó mis conocimientos sobre administración de Linux, desplie
 Estudiante de Administración de Sistemas Informáticos en Red (ASIR), ILERNA.
 
 ---
-
-*Documentación propia basada en una práctica académica. No se publican datos privados, claves ni material docente sin autorización.*
