@@ -86,7 +86,6 @@ sudo apache2ctl -M | grep ssl
 
 Preparé `/etc/apache2/ssl` para el certificado y la clave privada de un **certificado autofirmado generado con OpenSSL**. También configuré un Virtual Host HTTPS, recargué Apache y comprobé que atendía conexiones en el puerto TCP 443. La web se verificó desde un navegador Windows.
 
-**Nota de seguridad:** no se incluyen certificados privados ni claves en este repositorio. Un certificado autofirmado no es automáticamente confiable para el navegador.
 
 ### 6. Registros y diagnóstico
 
