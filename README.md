@@ -149,8 +149,6 @@ Capturas extraídas **de mi propia práctica**. Están organizadas por fases y m
 
 ![Log de solicitud 404](capturas/15-registro-solicitud-404.png)
 
-> **Nota de seguridad:** el listado de certificados de la captura 11 no incluye el contenido de la clave privada. En la captura aparecen permisos de lectura amplios para el archivo `.key`; como mejora de seguridad del laboratorio, deben restringirse al administrador. No se incluye esa clave en el repositorio.
-
 ## Aprendizajes
 
 Este proyecto reforzó mis conocimientos sobre administración de Linux, despliegue de servicios web, resolución local de nombres, Virtual Hosts, transferencia segura de archivos, certificados TLS de laboratorio y análisis de logs para diagnosticar incidencias.
@@ -161,6 +159,6 @@ Este proyecto reforzó mis conocimientos sobre administración de Linux, desplie
 Estudiante de Administración de Sistemas Informáticos en Red (ASIR), ILERNA.
 
 ---
-Seguridad: El proyecto se desarrolló en un entorno de laboratorio. Las direcciones IP utilizadas pertenecen a una red privada y no se incluyen contraseñas ni claves privadas.
+> **Nota de seguridad:** El proyecto se desarrolló en un entorno de laboratorio. Las direcciones IP utilizadas pertenecen a una red privada y no se incluyen contraseñas ni claves privadas.
 
 *Documentación propia basada en una práctica académica. No se publican datos privados, claves ni material docente sin autorización.*
